@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    />
+
+    <title>Product Details</title>
+  </head>
+
+  <body class="bg-white text-gray-800">
+    <!-- ==================== Breadcrumb ==================== -->
+
+    <nav aria-label="Breadcrumb">
+      <ol
+        class="flex items-center gap-3 sm:gap-4 px-4 sm:px-6 lg:px-10 py-6 sm:py-7"
+      >
+        <li>
+          <a href="#" class="flex items-center gap-2 text-sm text-gray-800">
+            <i class="fas fa-home text-gray-800"></i>
+            Home
+          </a>
+        </li>
+
+        <li aria-hidden="true" class="text-gray-500">•</li>
+
+        <li>
+          <a href="#" class="text-sm text-gray-800"> Grocery </a>
+        </li>
+
+        <li aria-hidden="true" class="text-gray-500">•</li>
+
+        <li>
+          <span class="text-sm text-gray-400"> Product Details </span>
+        </li>
+      </ol>
+    </nav>
+
+    <!-- ==================== Product Section ==================== -->
+
+    <section>
+      <div
+        class="product-container flex flex-col lg:grid lg:grid-cols-2 2xl:flex 2xl:flex-row items-start gap-8 2xl:gap-12 px-4 sm:px-6 lg:px-8 2xl:px-10 py-4 sm:py-6 lg:py-7"
+      >
+        <!-- ================================================== -->
+        <!-- LEFT : PRODUCT GALLERY -->
+        <!-- ================================================== -->
+
+        <div
+          class="product-images w-full flex flex-col md:flex-row gap-4 lg:gap-5 2xl:gap-6 min-w-0 2xl:w-[690px] 2xl:shrink-0"
+        >
+          <!-- ==================== Thumbnails ==================== -->
+
+          <div
+            class="product-thumbnails w-full md:w-[100px] flex flex-row md:flex-col gap-3 md:gap-4 2xl:gap-5 overflow-x-auto md:overflow-visible shrink-0 pb-1 md:pb-0"
+          >
+            <!-- Thumbnail 1 -->
+            <div
+              class="thumbnail w-full aspect-square md:w-[90px] md:h-[90px] md:aspect-auto 2xl:w-[100px] 2xl:h-[100px] rounded-lg overflow-hidden bg-[#f5f6fa] cursor-pointer"
+            >
+              <img
+                src="./public/assets/images/product-1.webp"
+                alt="Product image 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Thumbnail 2 -->
+            <div
+              class="thumbnail w-full aspect-square md:w-[90px] md:h-[90px] md:aspect-auto 2xl:w-[100px] 2xl:h-[100px] rounded-lg overflow-hidden bg-[#f5f6fa] opacity-50 hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+            >
+              <img
+                src="./public/assets/images/product-2.webp"
+                alt="Product image 2"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Thumbnail 3 -->
+            <div
+              class="thumbnail w-full aspect-square md:w-[90px] md:h-[90px] md:aspect-auto 2xl:w-[100px] 2xl:h-[100px] rounded-lg overflow-hidden bg-[#f5f6fa] opacity-50 hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+            >
+              <img
+                src="./public/assets/images/product-3.webp"
+                alt="Product image 3"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Thumbnail 4 -->
+            <div
+              class="thumbnail w-full aspect-square md:w-[90px] md:h-[90px] md:aspect-auto 2xl:w-[100px] 2xl:h-[100px] rounded-lg overflow-hidden bg-[#f5f6fa] opacity-50 hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+            >
+              <img
+                src="./public/assets/images/product-4.webp"
+                alt="Product image 4"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Thumbnail 5 -->
+            <div
+              class="thumbnail max-md:hidden w-[72px] h-[72px] sm:w-[80px] sm:h-[80px] md:w-[90px] md:h-[90px] 2xl:w-[100px] 2xl:h-[100px] shrink-0 rounded-lg overflow-hidden bg-[#f5f6fa] opacity-50 hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+            >
+              <img
+                src="./public/assets/images/product-5.webp"
+                alt="Product image 5"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Thumbnail 6 -->
+            <div
+              class="thumbnail max-md:hidden w-[72px] h-[72px] sm:w-[80px] sm:h-[80px] md:w-[90px] md:h-[90px] 2xl:w-[100px] 2xl:h-[100px] shrink-0 rounded-lg overflow-hidden bg-[#f5f6fa] opacity-50 hover:opacity-100 transition-opacity duration-300"
+            >
+              <img
+                src="./public/assets/images/product-4.webp"
+                alt="Product image 6"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- ==================== Main Image ==================== -->
+
+          <div
+            class="relative product-main-image w-full min-w-0 h-[367px] sm:h-[450px] md:h-[550px] lg:h-[600px] 2xl:h-[690px] rounded-xl overflow-hidden bg-[#f5f6fa]"
+          >
+            <img
+              src="./public/assets/images/product-2.webp"
+              alt="Product"
+              class="w-full h-full object-contain"
+            />
+
+            <!-- Next Arrow -->
+
+            <button
+              type="button"
+              class="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white flex items-center justify-center shadow-sm hover:bg-gray-100 transition"
+              aria-label="Next image"
+            >
+              <i class="fa-solid fa-chevron-right text-gray-700 text-sm"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ================================================== -->
+        <!-- RIGHT : PRODUCT INFO -->
+        <!-- ================================================== -->
+
+        <div
+          class="product-info w-full min-w-0 border border-gray-300 rounded-2xl px-4 sm:px-5 lg:px-6 py-5 sm:py-6 2xl:w-[672px] 2xl:shrink-0"
+        >
+          <!-- ==================== Sale + Wishlist ==================== -->
+
+          <div class="flex items-start justify-between">
+            <span class="bg-[#d80032] text-white text-sm px-2 py-1">
+              SALES
+            </span>
+
+            <button
+              type="button"
+              class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-50 flex items-center justify-center shrink-0 hover:text-red-500 transition-colors duration-300"
+              aria-label="Add to wishlist"
+            >
+              <i class="fa-regular fa-heart text-lg sm:text-xl"></i>
+            </button>
+          </div>
+
+          <!-- ==================== Product Title ==================== -->
+
+          <h1
+            class="mt-3 text-xl sm:text-2xl lg:text-[25px] leading-[1.3] font-bold text-gray-800"
+          >
+            Crisp Red Apples – Sweet, Juicy & Fresh...
+          </h1>
+
+          <!-- ==================== Rating ==================== -->
+
+          <div class="flex items-center gap-1 mt-4">
+            <div
+              class="text-yellow-400 text-base sm:text-lg tracking-tight whitespace-nowrap"
+            >
+              ★★★★
+
+              <span class="text-gray-400"> ★ </span>
+            </div>
+
+            <span class="text-xs sm:text-sm text-gray-500 ml-1">
+              (11.78k reviews)
+            </span>
+          </div>
+
+          <!-- ==================== Price ==================== -->
+
+          <div class="flex flex-wrap items-center gap-3 sm:gap-4 mt-5">
+            <span class="text-xl sm:text-2xl font-bold text-gray-800">
+              $62.97
+            </span>
+
+            <span class="text-xl sm:text-2xl text-gray-400 line-through">
+              $62.97
+            </span>
+
+            <span class="bg-yellow-400 text-xs sm:text-sm px-2 py-1">
+              15% OFF
+            </span>
+          </div>
+
+          <!-- ==================== Divider ==================== -->
+
+          <div
+            class="border-t border-dashed border-gray-300 my-6 sm:my-7"
+          ></div>
+
+          <!-- ==================== Color ==================== -->
+
+          <div>
+            <p class="mb-4 sm:mb-5">
+              Color:
+
+              <span class="font-medium"> Green </span>
+            </p>
+
+            <div class="flex gap-3">
+              <!-- Cyan -->
+
+              <button
+                type="button"
+                class="w-9 h-9 rounded-full border border-[#008ca0] flex items-center justify-center text-[#008ca0] shrink-0"
+              >
+                <i class="fa-regular fa-image text-xs"></i>
+              </button>
+
+              <!-- Blue -->
+
+              <button
+                type="button"
+                class="w-9 h-9 rounded-full border border-[#5278ff] flex items-center justify-center text-[#5278ff] shrink-0"
+              >
+                <i class="fa-regular fa-image text-xs"></i>
+              </button>
+
+              <!-- Yellow -->
+
+              <button
+                type="button"
+                class="w-9 h-9 rounded-full border border-[#ffb800] flex items-center justify-center text-[#ffb800] shrink-0"
+              >
+                <i class="fa-regular fa-image text-xs"></i>
+              </button>
+
+              <!-- Red -->
+
+              <button
+                type="button"
+                class="w-9 h-9 rounded-full border border-[#ff5264] flex items-center justify-center text-[#ff5264] shrink-0"
+              >
+                <i class="fa-regular fa-image text-xs"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- ==================== Pack Size ==================== -->
+
+          <div class="mt-6">
+            <p class="mb-4">
+              Pack Size:
+
+              <span class="font-medium"> 250 ML </span>
+            </p>
+
+            <div class="flex flex-wrap gap-2 sm:gap-3">
+              <button
+                type="button"
+                class="h-10 px-4 sm:px-5 border border-gray-300 rounded-lg text-sm hover:border-[#00656b] hover:text-[#00656b] transition-all duration-300"
+              >
+                60 ML
+              </button>
+
+              <button
+                type="button"
+                class="h-10 px-4 sm:px-5 border border-gray-300 rounded-lg text-sm hover:border-[#00656b] hover:text-[#00656b] transition-all duration-300"
+              >
+                120 ML
+              </button>
+
+              <button
+                type="button"
+                class="h-10 px-4 sm:px-5 border border-gray-300 rounded-lg text-sm hover:border-[#00656b] hover:text-[#00656b] transition-all duration-300"
+              >
+                220 ML
+              </button>
+
+              <button
+                type="button"
+                class="h-10 px-4 sm:px-5 rounded-lg bg-[#00656b] text-white text-sm hover:bg-[#005a5f] transition-all duration-300"
+              >
+                250 ML
+              </button>
+
+              <button
+                type="button"
+                class="h-10 px-4 sm:px-5 border border-gray-300 rounded-lg text-sm hover:border-[#00656b] hover:text-[#00656b] transition-all duration-300"
+              >
+                300 ML
+              </button>
+
+              <button
+                type="button"
+                class="h-10 px-4 sm:px-5 border border-gray-300 rounded-lg text-sm hover:border-[#00656b] hover:text-[#00656b] transition-all duration-300"
+              >
+                500 ML
+              </button>
+            </div>
+          </div>
+
+          <!-- ==================== Quantity ==================== -->
+
+          <div class="mt-7">
+            <p class="mb-4">Quantity</p>
+
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <!-- Counter -->
+
+              <div
+                class="w-full sm:w-[185px] h-12 border border-gray-300 rounded-lg flex items-center justify-between px-4 shrink-0"
+              >
+                <button type="button" class="text-xl text-gray-500">−</button>
+
+                <span> 1 </span>
+
+                <button type="button" class="text-xl text-gray-500">+</button>
+              </div>
+
+              <!-- Buy Now -->
+
+              <button
+                type="button"
+                class="relative overflow-hidden w-full sm:flex-1 h-12 rounded-lg bg-[#ffbd00] text-gray-900 font-medium transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_18px_rgba(255,189,0,0.35)] before:content-[''] before:absolute before:top-[-50%] before:left-[-50%] before:w-[200%] before:h-[200%] before:bg-linear-to-b before:from-transparent before:via-transparent before:via-70% before:to-white/40 before:rotate-[-45deg] before:translate-y-[-100%] before:transition-transform before:duration-500 hover:before:translate-y-[100%]"
+              >
+                <span class="relative z-10"> Buy Now </span>
+              </button>
+
+              <!-- Add To Cart -->
+
+              <button
+                type="button"
+                class="relative overflow-hidden w-full sm:flex-1 h-12 rounded-lg bg-[#00656b] text-white font-medium flex items-center justify-center gap-2 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_18px_rgba(0,101,107,0.45)] before:content-[''] before:absolute before:top-[-50%] before:left-[-50%] before:w-[200%] before:h-[200%] before:bg-linear-to-b before:from-transparent before:via-transparent before:via-70% before:to-[#c8f500]/40 before:rotate-[-45deg] before:translate-y-[-100%] before:transition-transform before:duration-500 hover:before:translate-y-[100%]"
+              >
+                <i
+                  class="fa-solid fa-cart-plus text-[#c8f500] relative z-10"
+                ></i>
+
+                <span class="relative z-10"> Add to Cart </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- ==================== Divider ==================== -->
+
+          <div class="border-t border-dashed border-gray-300 my-6"></div>
+
+          <!-- ==================== Share + Compare ==================== -->
+
+          <div class="flex items-center gap-4 sm:gap-5 text-blue-600">
+            <button type="button" class="flex items-center gap-2">
+              Share
+
+              <i class="fa-regular fa-share-from-square"></i>
+            </button>
+
+            <span class="text-gray-300"> | </span>
+
+            <button type="button" class="flex items-center gap-2">
+              <i class="fa-solid fa-code-compare"></i>
+
+              Compare
+            </button>
+          </div>
+
+          <!-- ==================== Product Details ==================== -->
+
+          <div class="mt-6 space-y-5">
+            <!-- Free Shipping -->
+
+            <div
+              class="grid grid-cols-[105px_15px_1fr] sm:grid-cols-[155px_20px_1fr] gap-1"
+            >
+              <span class="font-medium"> Free Shipping </span>
+
+              <span> : </span>
+
+              <span class="text-gray-500">
+                Estimated Delivery Time 5-7 Days
+              </span>
+            </div>
+
+            <!-- SKU -->
+
+            <div
+              class="grid grid-cols-[105px_15px_1fr] sm:grid-cols-[155px_20px_1fr] gap-1"
+            >
+              <span class="font-medium"> SKU </span>
+
+              <span> : </span>
+
+              <span class="text-gray-500"> 456 </span>
+            </div>
+
+            <!-- Categories -->
+
+            <div
+              class="grid grid-cols-[105px_15px_1fr] sm:grid-cols-[155px_20px_1fr] gap-1"
+            >
+              <span class="font-medium"> Categories </span>
+
+              <span> : </span>
+
+              <span class="text-gray-500"> Clothing, Laptop </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript -->
+
+    <script src="index.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
